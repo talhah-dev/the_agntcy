@@ -64,7 +64,7 @@ const NextStep = () => {
 
       <div className="mt-8 grid gap-6 sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-3">
         <motion.div
-          className="group col-span-1 rounded-xl bg-[#f7f9f2] p-4 md:col-span-2 lg:col-span-1"
+          className="group col-span-1 rounded-xl bg-[#f7f9f2] p-4 md:p-6 md:col-span-2 lg:col-span-1"
           variants={itemVariants}
           whileHover={{ y: -4 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
@@ -138,7 +138,7 @@ const NextStep = () => {
         </motion.div>
 
         <motion.div
-          className="group col-span-1 rounded-xl bg-[#f7f9f2] p-4 md:col-span-2 lg:col-span-1"
+          className="group col-span-1 rounded-xl bg-[#f7f9f2] p-4 md:p-6 md:col-span-2 lg:col-span-1"
           variants={itemVariants}
           whileHover={{ y: -4 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
