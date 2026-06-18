@@ -1,7 +1,7 @@
-import Image from "next/image";
+"use client";
 import { ArrowUpRight, Sparkles, Users, Layers3 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { motion } from "motion/react";
+import { motion, type Variants } from "motion/react";
 
 const highlights = [
   "Less admin work",
@@ -9,7 +9,7 @@ const highlights = [
   "More human time",
 ];
 
-const sectionVariants = {
+const sectionVariants: Variants = {
   hidden: { opacity: 0, y: 28 },
   visible: {
     opacity: 1,
@@ -22,7 +22,7 @@ const sectionVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 18 },
   visible: {
     opacity: 1,
@@ -65,6 +65,24 @@ export default function TeamFocusSection() {
               </motion.p>
             </div>
 
+            <motion.div
+              className="grid gap-3 sm:grid-cols-3"
+              variants={itemVariants}
+            >
+              <div className="rounded-2xl border border-border/60 bg-white/80 p-4 shadow-sm backdrop-blur">
+                <Sparkles className="mb-3 h-4 w-4 text-[#00545f]" />
+                <p className="text-sm font-medium text-neutral-950">{highlights[0]}</p>
+              </div>
+              <div className="rounded-2xl border border-border/60 bg-white/80 p-4 shadow-sm backdrop-blur">
+                <Users className="mb-3 h-4 w-4 text-[#00545f]" />
+                <p className="text-sm font-medium text-neutral-950">{highlights[1]}</p>
+              </div>
+              <div className="rounded-2xl border border-border/60 bg-white/80 p-4 shadow-sm backdrop-blur">
+                <Layers3 className="mb-3 h-4 w-4 text-[#00545f]" />
+                <p className="text-sm font-medium text-neutral-950">{highlights[2]}</p>
+              </div>
+            </motion.div>
+
 
             <motion.div className="flex flex-col gap-3 sm:flex-row sm:items-center" variants={itemVariants}>
               <Button className="group relative h-14 w-fit cursor-pointer overflow-hidden rounded-full bg-[#bdff00] p-1 ps-6 pe-14 text-sm font-medium text-neutral-950 transition-all duration-500 hover:bg-[#bdff00]/90 hover:ps-14 hover:pe-6">
@@ -86,13 +104,10 @@ export default function TeamFocusSection() {
           >
             <div className="absolute -inset-4 rounded-[2rem] bg-[radial-gradient(circle_at_top_left,rgba(189,255,0,0.24),transparent_45%),radial-gradient(circle_at_bottom_right,rgba(0,84,95,0.18),transparent_45%)] blur-2xl" />
             <div className="relative overflow-hidden rounded-2xl border border-border/50 shadow-[0_24px_60px_rgba(0,0,0,0.12)]">
-              <Image
+              <img
                 src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Team collaborating around a workspace"
-                width={1074}
-                height={900}
                 className="h-full w-full object-cover lg:min-h-[35rem]"
-                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
           </motion.div>
