@@ -86,21 +86,21 @@ function FeatureCarousel({ items, accent }: { items: CarouselItem[]; accent: "ne
 
 function TwoProductsSection() {
     return (
-        <section className="w-full bg-white py-24 md:py-32 overflow-hidden">
+        <section className="w-full bg-white md:pt-20 pt-16 pb-24 md:pb-32 overflow-hidden">
             <div className="container mx-auto px-6 max-w-6xl">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
-                    className="flex flex-col items-center text-center mb-16 gap-4"
+                    className="flex flex-col items-center text-center md:mb-16 gap-4 mb-8"
                 >
-                    <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#00545f]">
+                    <span className="text-sm font-semibold tracking-[0.05em] uppercase text-[#00545f]">
                         Two products. Two purposes.
                     </span>
-                    <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-[-0.03em] text-neutral-950 leading-[1.05]">
-                        Automations execute.{" "}
-                        <span className={`${instrumentSerif.className} font-normal text-[#00545f]`}>
+                    <h2 className="text-4xl md:text-6xl leading-tight font-semibold tracking-[-0.03em] text-neutral-950">
+                        Automations execute. {" "}
+                        <span className={` block text-[#00545f] ${instrumentSerif.className}`}>
                             Employees think.
                         </span>
                     </h2>
@@ -112,7 +112,7 @@ function TwoProductsSection() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
-                        className="flex flex-col gap-6 rounded-3xl border border-neutral-200 bg-neutral-50 p-8 md:p-10"
+                        className="flex flex-col gap-6 rounded-3xl border border-neutral-200 bg-neutral-50 p-4 md:p-10"
                     >
                         <div className="flex items-center gap-4">
                             <div className="w-12 h-12 rounded-xl bg-neutral-200 flex items-center justify-center shrink-0">
@@ -126,11 +126,11 @@ function TwoProductsSection() {
                             Rigid task execution. Fast and fixed-fee. One workflow, one outcome.
                         </p>
                         <FeatureCarousel items={automationItems} accent="neutral" />
-                        <div className="pt-2 border-t border-neutral-200">
+                        {/* <div className="pt-2 border-t border-neutral-200">
                             <p className="text-sm text-neutral-400 italic">
                                 Best for single workflows that do not change.
                             </p>
-                        </div>
+                        </div> */}
                     </motion.div>
 
                     <motion.div
@@ -138,7 +138,7 @@ function TwoProductsSection() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
-                        className="flex flex-col gap-6 rounded-3xl border border-[#00545f]/25 bg-[#00545f]/4 p-8 md:p-10"
+                        className="flex flex-col gap-6 rounded-3xl border border-[#00545f]/25 bg-[#00545f]/4 p-4 md:p-10"
                     >
                         <div className="flex items-center gap-4">
                             <div className="w-12 h-12 rounded-xl bg-[#bdff00] flex items-center justify-center shrink-0">
@@ -152,11 +152,11 @@ function TwoProductsSection() {
                             Versatile. Communicate with your team. Own an outcome. Adapt continuously.
                         </p>
                         <FeatureCarousel items={employeeItems} accent="brand" />
-                        <div className="pt-2 border-t border-[#00545f]/15">
+                        {/* <div className="pt-2 border-t border-[#00545f]/15">
                             <p className={`text-sm text-[#00545f] font-medium ${instrumentSerif.className} italic`}>
                                 Best for outcomes that require judgement and communication.
                             </p>
-                        </div>
+                        </div> */}
                     </motion.div>
                 </div>
 
@@ -165,9 +165,9 @@ function TwoProductsSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-                    className="mt-14 flex flex-col sm:flex-row items-center justify-between gap-6 px-2"
+                    className="md:mt-14 mt-8  flex flex-col sm:flex-row items-center justify-between gap-6 px-2"
                 >
-                    <p className={`text-lg md:text-xl text-neutral-400 ${instrumentSerif.className} italic`}>
+                    <p className={`text-lg md:text-xl text-neutral-400 ${instrumentSerif.className} md:text-start text-center tracking-wide italic`}>
                         Most systems are rigid. That is why they break. Ours are alive.
                     </p>
                     <a

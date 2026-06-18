@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { motion } from "motion/react";
-import { TrendingUp, Megaphone, HeadphonesIcon, Settings2 } from "lucide-react"
+import { TrendingUp, Megaphone, HeadphonesIcon, Settings2, ArrowUpRight } from "lucide-react"
 
 const featureData = [
     {
@@ -36,7 +36,7 @@ const featureData = [
 const WorkforcePackages = () => {
     return (
         <section>
-            <div className="lg:py-20 sm:py-16 py-8 ">
+            <div className="lg:pb-20 sm:pb-16 pb-8 md:pt-30 pt-20 ">
                 <div className="mx-auto max-w-7xl px-4 sm:px-8">
                     <div className="flex flex-col gap-8 md:gap-12">
                         <motion.div
@@ -63,8 +63,13 @@ const WorkforcePackages = () => {
                                     Multiple AI employees working together to own an entire outcome. Not a single task. A whole function of your business.
                                 </p>
                             </div>
-                            <Button className="rounded-full px-5 py-2.5 shadow-xs h-auto cursor-pointer capitalize">
-                                <a href="#"> Explore workforce packages </a>
+                            <Button className="relative text-sm font-medium rounded-full h-12 p-1 ps-6 pe-14 group transition-all duration-500 hover:ps-14 hover:pe-6 w-fit overflow-hidden cursor-pointer bg-[#bdff00] text-neutral-950 hover:bg-[#bdff00]/90">
+                                <span className="relative z-10 transition-all duration-500">
+                                    Explore workforce packages
+                                </span>
+                                <span className="absolute right-1 w-10 h-10 bg-neutral-950 text-[#bdff00] rounded-full flex items-center justify-center transition-all duration-500 group-hover:right-[calc(100%-44px)] group-hover:rotate-45">
+                                    <ArrowUpRight size={16} />
+                                </span>
                             </Button>
                         </motion.div>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-6">
@@ -89,7 +94,7 @@ const WorkforcePackages = () => {
                                             </AvatarFallback>
                                         </Avatar>
                                         <h3 className="text-xl sm:text-2xl font-medium">
-                                            "We replaced three full-time hires with The Agntcy's Revenue Workforce. Our pipeline didn't just grow — it became self-sustaining."
+                                            "We replaced three full-time hires with The Agntcy's Revenue Workforce. Our pipeline didn't just grow it became self-sustaining."
                                         </h3>
                                     </CardContent>
                                     <CardFooter className="bg-card border-none w-full px-6 sm:px-8 py-0 flex flex-col items-start gap-0.5">

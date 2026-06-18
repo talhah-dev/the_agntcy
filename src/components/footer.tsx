@@ -50,7 +50,7 @@ const Footer = () => {
         <div className="py-12">
           <div className="grid grid-cols-2 lg:grid-cols-10 gap-10">
             <div className="col-span-2 lg:col-span-3">
-              <div className="flex flex-col gap-5">
+              <div className="flex flex-col gap-5 items-start">
                 <Image src={"/logo.svg"} alt="The Agntcy Logo" width={140} height={40} className="h-5.5 invert w-auto"
                 />
 

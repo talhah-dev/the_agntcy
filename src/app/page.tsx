@@ -6,17 +6,21 @@ import TeamFocusSection from "@/components/TeamFocusSection";
 import WorkforcePackages from "@/components/WorkforcePackages";
 import TimelineDemo from "@/components/timeline-demo";
 import TwoProductsSection from "@/components/TwoProductsSection";
+import DepartmentsSection from "@/components/DepartmentsSection";
+import NextStep from "@/components/NextStep";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="overflow-x-hidden">
       <Header />
       <HeroSection />
       <Counter />
-      <TwoProductsSection />
       <TeamFocusSection />
+      <TwoProductsSection />
+      <DepartmentsSection />
       <WorkforcePackages />
       <TimelineDemo />
+      <NextStep />
       <Footer />
     </div>
   );
